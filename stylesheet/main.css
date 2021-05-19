@@ -146,6 +146,6 @@ figcaption {
     background-color: var(--clr-blue);
 }
 /* Sectional Styling */
-/* img a{
+img a{
     all: unset;
-} */
+}
