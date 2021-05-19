@@ -2,13 +2,15 @@
 
 /* Variables */
 :root {
-    background: url(/img/page-background.png);
+    background: url(../img/page-background.png);
     background-size: contain;
     background-repeat: repeat;
   
     /* small screen font-sizes */
     font-family: "Raleway", sans-serif;
     color: var(--clr-purple);
+
+    line-height: 1.6;
 
     --fs-200: 0.75rem;
     --fs-300: 1rem;
@@ -32,6 +34,7 @@
     --clr-orange: #ffba00;
     --clr-lemon: #82c820;
     --clr-blue: #4285f4;
+    --clr-rouge: #ed1c24;
   
     --shadow: 0 0.5rem 0.5rem 0.2rem rgba(0, 0, 0, 0.4);
   
@@ -84,8 +87,8 @@ figcaption {
 /* Utility Classes */
 .container {
     padding: calc(var(--spacer) * 2);
-    padding-bottom: 0;
     margin: 0 auto;
+    border-radius: var(--spacer);
   }
 
 .clip {
@@ -95,29 +98,22 @@ figcaption {
 .split {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    place-items: center;
   }
 
 .split > * + * {
     margin: calc(var(--spacer) * 3) 0 0 0;
   }
 
-.split--row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-}
-
-.split--row > * + * {
-    margin: 0 0 0 calc(var(--spacer) * 3);
-  }
-
-  .split > *,
-  .split--row > * {
+.split > * {
     width: 100%;
-  }
+    place-items: stretch;
+}
+.split--row{
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+}
 
 @media (min-width: 40em) {
     .split {
@@ -132,6 +128,11 @@ figcaption {
 .bg {
     color: var(--clr-white);
     text-align: center;
+    border-radius: var(--spacer);
+}
+
+.bg p {
+    text-align: left;
 }
 
 .bg--lemon {
@@ -145,7 +146,34 @@ figcaption {
 .bg--blue {
     background-color: var(--clr-blue);
 }
+
+.bg--purple {
+    background-color: var(--clr-purple);
+}
+
+.bg--rouge {
+    background-color: var(--clr-rouge);
+}
+
 /* Sectional Styling */
-img a{
-    all: unset;
+footer a{
+    display: block;
+}
+
+#about-us {
+    background-color: rgba(158, 1, 132, 0.75);
+}
+
+.hero-img {
+    order: 1;
+}
+
+.hero-text {
+    order: 2;
+}
+
+@media (min-width: 40em) {
+    .hero-img {
+        order: 2;
+    }
 }

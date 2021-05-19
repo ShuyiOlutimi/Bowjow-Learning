@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheet/main.css">
+    <link rel="stylesheet" href="stylesheet/main.css">
     <title>Bowjow Learning</title>
 </head>
 
@@ -15,7 +15,7 @@
         <a href="/index.html"><img src="img/bowjow-logo2.png" alt="Bowjow Logo"></a>
 
         <nav>
-            <ul class="split--row">
+            <ul class="split">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-us">AboutUs</a></li>
                 <li><a href="#partnership">Partnership</a></li>
@@ -25,7 +25,7 @@
     </header>
 
     <section id="home" class="container split">
-        <article>
+        <article class="hero-text">
             <header>
                 <h1>Free Resources To Keep Kids Learning</h1>
             </header>
@@ -45,43 +45,45 @@
             </footer>
         </article>
 
-        <article>
+        <article class="hero-img">
             <img src="img/reading-kids.png" alt="">
         </article>
     </section>
 
-    <section id="about-us" class="container">
+    <section id="about-us" class="container bg">
         <header>
             <h1>Welcome To Bowjow Learning</h1>
         </header>
 
         <p>Bowjow learning is an initiative to encourage children to learn using generally available mediums like TVs, Radios and a regular mobile phone. Before COVID-19 UNICEF reports that there were 10,500,000 children out of the school system.</p>
 
-        <p>Bowjow aims to create opportunities for inclusiveneness in education. Education for ALL</p>
+        <p>Bowjow aims to create opportunities for inclusion in education. Education for ALL</p>
 
-        <article>
-            <article>
+        <article class="split">
+            <article class="bg bg--lemon">
                 <h1>Vision</h1>
                 <p>Bowjow Learning is an initiative to encourage children to learn using generally available mediums like TVs, radios and a regular mobile phone</p>
             </article>
-            <article>
+
+            <article class="bg bg--orange">
                 <h1>Mission</h1>
                 <p>Bowjow aims to create opportunities for inclusive learning</p>
             </article>
-            <article>
+
+            <article class="bg bg--blue">
                 <h1>Goal</h1>
                 <p>To be a functional part of learning for 500,000 children between the ages of 2 to 11 in Nigeria by 2021 who would have otherwise had no access to education.</p>
             </article>
         </article>
 
         <footer>
-            <a href="">Subscribe to our mailing list for updates</a>
+            <a href="" class="bg bg--blue">Subscribe to our mailing list for updates</a>
         </footer>
     </section>
 
-    <section id="partnership" class="container">
+    <section id="partnership" class="container split">
         <article>
-            <img src="" alt="">
+            <img src="img/pointing-kid.png" alt="">
         </article>
 
         <article>
@@ -89,12 +91,16 @@
                 <h1>Partnership</h1>
             </header>
 
-            <p></p>
+            <p>Bowjow welcomes partners whose goals align with its own and are willing to support the initiative achieve its goals across various areas. Especially in three main areas:</p>
 
-            <p></p>
+            <ul>
+                <li>Technology Partnership/Support</li>
+                <li>Content Development Partnership/Support</li>
+                <li>Project Awareness Partnership/Support</li>
+            </ul>
 
             <footer>
-                <a href="">Fill our partnership form here</a>
+                <a href="" class="bg bg--rouge">Fill our partnership form here</a>
             </footer>
         </article>
     </section>
@@ -107,20 +113,20 @@
 
             <p>Feel free to reach out to us</p>
 
-            <form action="" autocomplete="on">
-                <label for="name">Name
-                  <input type="name" placeholder="Your name">
+            <form action="" autocomplete="on" class="split--row">
+                <label for="name">
+                  <input type="name" placeholder="Name">
                 </label>
                 
-                <label for="email">Email
-                  <input type="email" placeholder="example@domain.com">
+                <label for="email">
+                  <input type="email" placeholder="Email">
                 </label>
 
-                <label for="message">Message
+                <label for="message">
                     <input type="text" placeholder="Message">
                   </label>
     
-                <input type="submit" value="Send">
+                <input type="submit" value="Send" class="bg bg--lemon">
               </form>
         </article>
     </section>
