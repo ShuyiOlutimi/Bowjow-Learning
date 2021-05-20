@@ -1,4 +1,4 @@
-/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
 button,
 hr,
 input {
@@ -262,7 +262,7 @@ ul {
 .split {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 .split>*+* {
@@ -356,4 +356,9 @@ footer a {
 
 #about-us a {
     width: auto;
+    margin: 0 auto;
+}
+
+form>*+*{
+    margin-top: calc(var(--spacer)*2);
 }
