@@ -1,5 +1,4 @@
-normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
-button,
+normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css button,
 hr,
 input {
     overflow: visible
@@ -202,7 +201,7 @@ template {
 }
 
 /* General Styling */
-*+* {
+.flow-content > *+* {
     margin-top: 2rem;
 }
 
@@ -253,7 +252,7 @@ ul {
 
 /* Utility Classes */
 .container {
-    padding: calc(var(--spacer) * 3);
+    padding: calc(var(--spacer) * 2);
     margin: 0 auto;
     max-width: 80rem;
     border-radius: var(--spacer);
@@ -262,36 +261,28 @@ ul {
 .split {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-}
-
-.split>*+* {
-    margin: calc(var(--spacer) * 2) 0 0 0;
+    place-items: center;
+    gap: 2rem;
 }
 
 .split>* {
     width: 100%;
 }
 
-.split--row {
-    display: flex;
-    flex-direction: column;
-    place-items: start;
-}
-
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
     .split {
         flex-direction: row;
     }
 
-    .split>*+* {
-        margin: 0 0 0 calc(var(--spacer) * 2);
+    .col {
+        width: 100%;
     }
 }
 
-.flex-item {
-    flex: 1 1 33.33%;
-    padding: 2rem;
+.split--row {
+    display: flex;
+    flex-direction: column;
+    place-items: start;
 }
 
 .bg {
@@ -321,12 +312,13 @@ ul {
 }
 
 /* Sectional Styling */
+
 #home a {
     width: 10rem;
 }
 
-footer a {
-    display: block;
+footer {
+    text-align: center;
 }
 
 .hero-img {
@@ -334,6 +326,7 @@ footer a {
 }
 
 .hero-text {
+    align-self: center;
     order: 2;
 }
 
@@ -341,9 +334,14 @@ footer a {
     .hero-img {
         order: 2;
     }
+
+    .hero-text {
+        max-width: 50%;
+    }
 }
 
 #about-us {
+    color: var(--clr-white);
     background-color: rgba(158, 1, 132, 1);
     background-image: url(../img/page-background.png);
     background-size: contain;
@@ -354,11 +352,16 @@ footer a {
     text-align: left;
 }
 
-#about-us a {
-    width: auto;
-    margin: 0 auto;
+.flex {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-form>*+*{
-    margin-top: calc(var(--spacer)*2);
+.flex-item {
+    flex: 1 1 250px;
+    padding: 2rem;
+    justify-content: center;
 }
